@@ -1,0 +1,59 @@
+//imageClassifier results
+
+// function gotResults(error, results) {
+//   if (error) {
+//     console.error(error);
+//   } else {
+//     console.log(results);
+//     let label = results[0].label;
+//     let prob = results[0].confidence;
+//
+//     // createP(label);
+//     // createP(prob);
+//
+//
+//   }
+// }
+
+//dropzone
+
+// var dropzone;
+
+// function highlight() {
+//   dropzone.style('background-color', '#ccc');
+// }
+//
+// function unhighlight() {
+//   dropzone.style('background-color', '#fff')
+// }
+//
+// function gotFile(file) {
+//   createP(file.name);
+//   createP(file.type);
+//   createP(file.size);
+//   createImg(file.data);
+//
+// }
+
+function setup() {
+  // dropzone = select('#dropzone');
+  // dropzone.dragOver(highlight);
+  // dropzone.dragLeave(unhighlight);
+  // dropzone.drop(gotFile, unhighlight);
+
+  mobilenet = ml5.imageClassifier('MobileNet', modelReady);
+}
+
+
+//predict image with button
+// function predictImage() {
+//   var file   = document.querySelector('input[type=file]').files[0];
+//   var reader = new FileReader();
+//   reader.readAsDataURL(file);
+//   createP(file.name);
+//   createP(file.type);
+//   createP(file.size);
+//   console.log(file);
+//
+//   mobilenet.predict(file);
+// }
